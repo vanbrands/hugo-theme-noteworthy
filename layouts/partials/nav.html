@@ -1,11 +1,18 @@
 <!-- Sidebar navigation -->
 <nav>
   {{ partial "header.html" . }}
+  <p>{{ .Site.Params.subtitle }}</p>
   <div class="nav-menu">
   {{ range .Site.Menus.main }}
     <a class="color-link nav-link" href="{{ .URL }}">{{ .Name }}</a>
   {{ end }}
-  <a class="color-link nav-link" href="{{ .Site.RSSLink }}" target="_blank" rel="noopener" type="application/rss+xml">RSS</a>
-</div>
+  </div>
+  <hr/>
+  <h5>Topics</h5>
+  <div class="nav-menu">
+  {{ range .Site.Menus.topics }}
+    <a class="color-link nav-link" href="{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
+  </div>
 {{ partial "footer.html" . }}
 </nav>
