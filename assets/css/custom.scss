@@ -1,0 +1,22 @@
+@import "partials/_breakpoints";
+
+.sub-title {
+  text-align: center;
+}
+
+.topics {
+  display: none;
+}
+
+nav h5 {
+  text-align: center;
+}
+
+
+@include media(900px) {
+
+  .sub-title, nav h5 {
+    text-align: left;
+  }
+
+}
