@@ -8,6 +8,13 @@
         <p><a href="https://gohugo.io" target="_blank" rel="noopener">{{ i18n "built_with_hugo" }}</a></p>
 	</div>
 
+	<!-- <div class="footer-mobile-links">
+		<p><b>Read in other languages: </b></p>
+		{{ range $.Site.Home.AllTranslations }}
+  		<p><a href="{{ .Permalink }}">{{ .Language.LanguageName }} </a></p>
+		{{ end }}
+	</div> -->
+
 	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
 	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
 
