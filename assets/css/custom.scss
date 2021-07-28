@@ -15,8 +15,34 @@ nav h5 {
 
 @include media(900px) {
 
+  .content-container {
+      max-width: 900px;
+  }
+
   .sub-title, nav h5 {
     text-align: left;
+  }
+
+}
+
+// Post Series Shortcode
+
+.post-series{
+
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: #34495E;
+  padding: 1em;
+  color: white;
+  border-radius: 10px;
+
+  h1, h2, h3 {
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+
+  a {
+    color: white;
   }
 
 }

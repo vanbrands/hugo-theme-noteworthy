@@ -1,0 +1,15 @@
+{{ $seriesID := .Get "name" }}
+
+<div class="post-series">
+
+  <h3>This post is part of a series</h3>
+  <h2>{{ index .Site.Data.series $seriesID "name" }}</h2>
+  <p>{{ index .Site.Data.series $seriesID "description" }}</p>
+
+  <ul>
+    {{ range index .Site.Data.series $seriesID "posts" }}
+      <li><a href="{{ .link }}">{{ .title }}</a></li>
+    {{ end }}
+  </ul>
+
+</div>
